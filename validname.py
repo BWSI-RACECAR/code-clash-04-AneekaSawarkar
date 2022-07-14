@@ -39,21 +39,20 @@ class Solution:
             i += 1
         print(final_list) '''
        
-
-
-        list1 = input.split(' ')
-        list1[len(list1) - 1] = list1[len(list1) - 1].strip()
+        list1 = input.strip()
+        #list1[len(list1) - 1] = list1[len(list1) - 1].strip()
         no_duplicate = []
         i = 0
         while i < len(list1) -1:
             if list1[i] not in no_duplicate and list1[i] != '':
                 no_duplicate.append(list1[i])
             i += 1
-         
-        if len(no_duplicate) < len(list1):
+        
+        if len(no_duplicate) < len(list1[0]):
             return False
-        return True
-        pass
+        else:
+            return True
+        #pass
 
 def main():
     string1 = input()
