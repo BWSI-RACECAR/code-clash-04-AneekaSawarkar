@@ -29,16 +29,28 @@ class Solution:
         # return: bool
             
         # TODO: Write code below to return a bool with the solution to the prompt
-        list = input.split(' ')
+        ''' list = input.split(' ')
         final_list = []
         i = 0
+        print(list)
         while i < len(list):
-            if list[i] not in final_list and list[i] != '':
+            if list[i] not in final_list:
                 final_list.append(list[i])
             i += 1
-        print(final_list)
-        
-        if len(final_list) <= len(list):
+        print(final_list) '''
+       
+
+
+        list1 = input.split(' ')
+        list1[len(list1) - 1] = list1[len(list1) - 1].strip()
+        no_duplicate = []
+        i = 0
+        while i < len(list1) -1:
+            if list1[i] not in no_duplicate and list1[i] != '':
+                no_duplicate.append(list1[i])
+            i += 1
+         
+        if len(no_duplicate) < len(list1):
             return False
         return True
         pass
