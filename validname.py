@@ -30,19 +30,17 @@ class Solution:
             
         # TODO: Write code below to return a bool with the solution to the prompt
        
-        list1 = input.split(' ')
-        list1[len(list1) - 1] = list1[len(list1) - 1].strip()
+        list1 = input
         no_duplicate = []
         i = 0
-        while i < len(list1) -1:
+        while i < len(list1):
             if list1[i] not in no_duplicate and list1[i] != '':
                 no_duplicate.append(list1[i])
             i += 1
-        
-        if len(no_duplicate) < len(list1[0]):
+        if len(no_duplicate) < len(list1):
             return False
         return True
-        #pass
+        pass
 
 def main():
     string1 = input()
