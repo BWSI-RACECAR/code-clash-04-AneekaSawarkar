@@ -29,18 +29,9 @@ class Solution:
         # return: bool
             
         # TODO: Write code below to return a bool with the solution to the prompt
-        ''' list = input.split(' ')
-        final_list = []
-        i = 0
-        print(list)
-        while i < len(list):
-            if list[i] not in final_list:
-                final_list.append(list[i])
-            i += 1
-        print(final_list) '''
        
-        list1 = input.strip()
-        #list1[len(list1) - 1] = list1[len(list1) - 1].strip()
+        list1 = input.split(' ')
+        list1[len(list1) - 1] = list1[len(list1) - 1].strip()
         no_duplicate = []
         i = 0
         while i < len(list1) -1:
@@ -50,8 +41,7 @@ class Solution:
         
         if len(no_duplicate) < len(list1[0]):
             return False
-        else:
-            return True
+        return True
         #pass
 
 def main():
